@@ -18,6 +18,10 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 - ✅ Animações de fade-in nos elementos
 - ✅ Design responsivo para mobile
 - ✅ Configurado Vite com allowedHosts para Replit
+- ✅ Adicionado botão "Adicionar Bot" no hero com link do Discord OAuth
+  - Link: https://discord.com/oauth2/authorize?client_id=1426734768111747284
+  - Estilo visual destacado com cor do Discord (#5865f2)
+  - Animação de hover com elevação e sombra
 
 ## Seções do Site
 1. **Hero**: Apresentação principal com título e botões CTA
