@@ -22,6 +22,11 @@
 <body>
     <a href="#main" class="skip-link">Pular para conteúdo principal</a>
     
+    <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="theme-toggle-icon">🌙</span>
+        <span class="theme-toggle-label">Escuro</span>
+    </button>
+    
     <header>
     <section class="hero">
         <div class="hero-content">
@@ -132,36 +137,6 @@
             <path d="M18 15l-6-6-6 6"/>
         </svg>
     </button>
-
-    <div class="floating-contact">
-        <button class="floating-contact-btn" id="floatingContactBtn" aria-label="Abrir contatos">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-        </button>
-        <div class="floating-contact-panel" id="floatingContactPanel">
-            <div class="floating-contact-header">
-                <h3>Entre em Contato</h3>
-                <button class="close-panel" id="closePanel" aria-label="Fechar">×</button>
-            </div>
-            <div class="floating-contact-content">
-                <a href="https://discord.com/users/gomezfy_" target="_blank" class="floating-link discord-link">
-                    <span class="icon">💬</span>
-                    <div>
-                        <strong>Discord</strong>
-                        <span>@gomezfy_</span>
-                    </div>
-                </a>
-                <a href="mailto:farleyalves83@icloud.com" class="floating-link email-link">
-                    <span class="icon">📧</span>
-                    <div>
-                        <strong>Email</strong>
-                        <span>farleyalves83@icloud.com</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
 
     <script type="module" src="/src/main.ts"></script>
 </body>

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   animateOnScroll();
   initScrollToTop();
-  initFloatingContact();
+  initThemeToggle();
 });
 
 function initSmoothScroll() {
@@ -81,25 +81,32 @@ function initScrollToTop() {
   });
 }
 
-function initFloatingContact() {
-  const floatingBtn = document.getElementById('floatingContactBtn');
-  const floatingPanel = document.getElementById('floatingContactPanel');
-  const closeBtn = document.getElementById('closePanel');
+function initThemeToggle() {
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle?.querySelector('.theme-toggle-icon');
+  const themeLabel = themeToggle?.querySelector('.theme-toggle-label');
   
-  if (!floatingBtn || !floatingPanel || !closeBtn) return;
+  if (!themeToggle || !themeIcon || !themeLabel) return;
   
-  floatingBtn.addEventListener('click', () => {
-    floatingPanel.classList.toggle('active');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(savedTheme);
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   });
   
-  closeBtn.addEventListener('click', () => {
-    floatingPanel.classList.remove('active');
-  });
-  
-  document.addEventListener('click', (e) => {
-    const target = e.target as HTMLElement;
-    if (!floatingPanel.contains(target) && !floatingBtn.contains(target)) {
-      floatingPanel.classList.remove('active');
+  function setTheme(theme: string) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeIcon!.textContent = '☀️';
+      themeLabel!.textContent = 'Claro';
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeIcon!.textContent = '🌙';
+      themeLabel!.textContent = 'Escuro';
     }
-  });
+  }
 }
