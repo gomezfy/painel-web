@@ -3,59 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Projetos de Discord</title>
+    <title>Portfólio - Discord Developer</title>
 </head>
 <body>
-    <div id="app" class="container">
-        <header class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav-link active">Página Inicial</a></li>
-                    <li><a href="#" class="nav-link">Explorar</a></li>
-                    <li><a href="#" class="nav-link">Projetos</a></li>
-                    <li><a href="#" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Dev Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projetos" class="nav-link">Projetos</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main class="main-content">
-            <section class="feed-header">
-                <h2>Página Inicial</h2>
-            </section>
-            <section class="feed">
-                <article class="post">
-                    <div class="post-avatar"></div>
-                    <div class="post-content">
-                        <div class="post-header">
-                            <strong>Seu Nome</strong> <span>@seunome · 1min</span>
-                        </div>
-                        <p>Bem-vindo ao meu novo portfólio de projetos de Discord! Este site foi construído com TypeScript e Vite, com um design moderno inspirado no X/Twitter.</p>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-avatar"></div>
-                    <div class="post-content">
-                        <div class="post-header">
-                            <strong>Seu Nome</strong> <span>@seunome · 5min</span>
-                        </div>
-                        <p>Aqui vou compartilhar atualizações sobre meus bots e outras criações. Fique de olho!</p>
-                    </div>
-                </article>
-            </section>
-        </main>
-
-        <aside class="trends">
-            <div class="trends-container">
-                <h3>O que está acontecendo</h3>
-                <ul>
-                    <li><a href="#">#TypeScript</a></li>
-                    <li><a href="#">#DiscordBots</a></li>
-                    <li><a href="#">#ViteJS</a></li>
-                    <li><a href="#">#WebDevelopment</a></li>
-                </ul>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Discord Developer</h1>
+            <p class="hero-subtitle">Criando bots e experiências incríveis para comunidades Discord</p>
+            <div class="hero-buttons">
+                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                <a href="#contato" class="btn btn-secondary">Entre em Contato</a>
             </div>
-        </aside>
-    </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <p class="about-text">
+                Desenvolvedor especializado em criar bots para Discord com funcionalidades avançadas,
+                integrações personalizadas e experiências interativas para comunidades.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title">Bot de Moderação</h3>
+                    <p class="project-description">
+                        Sistema completo de moderação automática com filtros de spam, warns e logs detalhados.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Discord.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🎵</div>
+                    <h3 class="project-title">Music Bot</h3>
+                    <p class="project-description">
+                        Bot de música com suporte a múltiplas fontes, playlist e controles interativos.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Discord.js</span>
+                        <span class="tag">YouTube API</span>
+                        <span class="tag">Spotify</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🎮</div>
+                    <h3 class="project-title">Sistema de Economia</h3>
+                    <p class="project-description">
+                        Bot com sistema de economia, loja virtual, inventário e minigames para servidor.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Redis</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">Dashboard Analytics</h3>
+                    <p class="project-description">
+                        Painel web para gerenciar servidor Discord com estatísticas e configurações em tempo real.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Discord API</span>
+                        <span class="tag">Express</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🎫</div>
+                    <h3 class="project-title">Ticket System</h3>
+                    <p class="project-description">
+                        Sistema de tickets com categorias, transcrições e painel de gerenciamento para staff.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Discord.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Canvas</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">🔔</div>
+                    <h3 class="project-title">Notification Bot</h3>
+                    <p class="project-description">
+                        Bot de notificações para Twitch, YouTube e redes sociais com customização completa.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Webhooks</span>
+                        <span class="tag">APIs</span>
+                    </div>
+                    <a href="#" class="project-link">Ver Detalhes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Tecnologias & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-name">Discord.js</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">TypeScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Node.js</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">MongoDB / PostgreSQL</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">React</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">REST APIs</div>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="contact-text">Interessado em colaborar ou contratar um bot customizado?</p>
+            <div class="contact-links">
+                <a href="#" class="contact-btn">Discord</a>
+                <a href="#" class="contact-btn">GitHub</a>
+                <a href="#" class="contact-btn">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Discord Developer Portfolio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>
