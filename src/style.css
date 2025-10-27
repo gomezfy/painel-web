@@ -586,6 +586,30 @@ body {
     animation: fillBar 1.5s ease forwards;
 }
 
+.skill-discordjs {
+    background: linear-gradient(135deg, #5865f2 0%, #7289da 100%);
+}
+
+.skill-typescript {
+    background: linear-gradient(135deg, #3178c6 0%, #5fa3d8 100%);
+}
+
+.skill-nodejs {
+    background: linear-gradient(135deg, #68a063 0%, #8cc84b 100%);
+}
+
+.skill-database {
+    background: linear-gradient(135deg, #47a248 0%, #336791 100%);
+}
+
+.skill-react {
+    background: linear-gradient(135deg, #61dafb 0%, #00d8ff 100%);
+}
+
+.skill-api {
+    background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+}
+
 .contact {
     background: var(--background-primary);
     text-align: center;
