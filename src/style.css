@@ -267,6 +267,13 @@ body {
     animation-delay: 1s;
 }
 
+.badge-left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    animation-delay: 1.5s;
+}
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
