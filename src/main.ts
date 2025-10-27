@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   animateOnScroll();
   initNavbarScroll();
+  initScrollToTop();
+  initFloatingContact();
 });
 
 function initSmoothScroll() {
@@ -90,5 +92,49 @@ function initNavbarScroll() {
         link.classList.add('active');
       }
     });
+  });
+}
+
+function initScrollToTop() {
+  const scrollBtn = document.getElementById('scrollToTop');
+  
+  if (!scrollBtn) return;
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+function initFloatingContact() {
+  const floatingBtn = document.getElementById('floatingContactBtn');
+  const floatingPanel = document.getElementById('floatingContactPanel');
+  const closeBtn = document.getElementById('closePanel');
+  
+  if (!floatingBtn || !floatingPanel || !closeBtn) return;
+  
+  floatingBtn.addEventListener('click', () => {
+    floatingPanel.classList.toggle('active');
+  });
+  
+  closeBtn.addEventListener('click', () => {
+    floatingPanel.classList.remove('active');
+  });
+  
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!floatingPanel.contains(target) && !floatingBtn.contains(target)) {
+      floatingPanel.classList.remove('active');
+    }
   });
 }
