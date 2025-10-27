@@ -18,10 +18,16 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 - ✅ Animações de fade-in nos elementos
 - ✅ Design responsivo para mobile
 - ✅ Configurado Vite com allowedHosts para Replit
-- ✅ Adicionado botão "Adicionar Bot" no hero com link do Discord OAuth
+- ✅ Adicionado perfil pessoal do Farley no hero
+  - Foto de perfil redonda com borda azul do Discord
+  - Nome e título "Discord Developer"
+  - Efeito de hover com zoom
+- ✅ Sheriff Rex movido para seção de projetos como projeto destacado
+  - Card especial com borda destacada
+  - Foto redonda do bot (120px)
+  - Botão "Adicionar ao Servidor" com link OAuth
   - Link: https://discord.com/oauth2/authorize?client_id=1426734768111747284
-  - Estilo visual destacado com cor do Discord (#5865f2)
-  - Animação de hover com elevação e sombra
+  - Gradiente de fundo e sombra especial no hover
 
 ## Seções do Site
 1. **Hero**: Apresentação principal com título e botões CTA
