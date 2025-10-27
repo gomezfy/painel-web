@@ -691,6 +691,15 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.custom-emoji {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
 .featured-project .tag {
     background: linear-gradient(135deg, rgba(139, 27, 26, 0.8), rgba(62, 39, 35, 0.8));
     border: 2px solid #8B4513;
