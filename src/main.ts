@@ -3,7 +3,6 @@ import './style.css';
 document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   animateOnScroll();
-  initNavbarScroll();
   initScrollToTop();
   initFloatingContact();
 });
@@ -59,40 +58,6 @@ function animateOnScroll() {
   });
 
   skillBars.forEach(bar => skillObserver.observe(bar));
-}
-
-function initNavbarScroll() {
-  const navbar = document.querySelector('.navbar');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar?.classList.add('scrolled');
-    } else {
-      navbar?.classList.remove('scrolled');
-    }
-  });
-
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section[id]');
-    
-    sections.forEach(section => {
-      const sectionTop = (section as HTMLElement).offsetTop;
-      
-      if (window.scrollY >= sectionTop - 100) {
-        current = section.getAttribute('id') || '';
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
 }
 
 function initScrollToTop() {
