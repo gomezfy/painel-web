@@ -465,13 +465,52 @@ body {
 }
 
 .featured-project {
-    border: 2px solid var(--accent-primary);
-    background: linear-gradient(135deg, var(--background-card) 0%, rgba(88, 101, 242, 0.05) 100%);
-    box-shadow: 0 4px 20px rgba(88, 101, 242, 0.15);
+    border: 3px solid #8B4513;
+    background: linear-gradient(135deg, #2a1810 0%, #1a0f08 100%);
+    box-shadow: 
+        0 4px 20px rgba(139, 69, 19, 0.3),
+        inset 0 0 50px rgba(218, 165, 32, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-project::before {
+    content: '★';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #DAA520;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+.featured-project::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 4px double #CD853F;
+    border-radius: 12px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+@keyframes starPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .featured-project:hover {
-    box-shadow: 0 15px 50px rgba(88, 101, 242, 0.3);
+    box-shadow: 
+        0 15px 50px rgba(139, 69, 19, 0.5),
+        inset 0 0 80px rgba(218, 165, 32, 0.1);
+    border-color: #CD853F;
 }
 
 .project-bot-avatar {
@@ -484,8 +523,10 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid var(--accent-primary);
-    box-shadow: 0 5px 20px rgba(88, 101, 242, 0.4);
+    border: 4px solid #DAA520;
+    box-shadow: 
+        0 5px 20px rgba(218, 165, 32, 0.6),
+        0 0 40px rgba(139, 69, 19, 0.4);
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -505,6 +546,21 @@ body {
     transition: all 0.3s ease;
 }
 
+.featured-project .btn-discord-small {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    border: 2px solid #DAA520;
+    color: #FFD700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+}
+
+.featured-project .btn-discord-small:hover {
+    background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+    border-color: #FFD700;
+    transform: translateX(5px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.6);
+}
+
 .btn-discord-small:hover {
     background: var(--accent-hover);
     transform: translateX(5px);
@@ -520,6 +576,25 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--text-primary);
+}
+
+.featured-project .project-title {
+    color: #FFD700;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(218, 165, 32, 0.5);
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+}
+
+.featured-project .project-description {
+    color: #D4AF7A;
+}
+
+.featured-project .tag {
+    background: rgba(139, 69, 19, 0.4);
+    border: 1px solid #8B4513;
+    color: #DAA520;
 }
 
 .project-description {
