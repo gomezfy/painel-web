@@ -1,12 +1,55 @@
 import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initLoadingScreen();
   initSmoothScroll();
   animateOnScroll();
   initNavbarScroll();
   initScrollToTop();
   initFloatingContact();
 });
+
+function initLoadingScreen() {
+  const codeText = document.getElementById('code-text');
+  const loadingScreen = document.querySelector('.loading-screen');
+  
+  const code = `const developer = {
+  name: "Farley",
+  role: "Discord Developer",
+  passion: "coding and vibing",
+  skills: ["TypeScript", "Node.js", "Discord.js"],
+  
+  initialize() {
+    console.log("Loading portfolio...");
+    this.startCoding();
+  },
+  
+  startCoding() {
+    return "✨ Ready to build amazing things!";
+  }
+};
+
+developer.initialize();`;
+
+  let index = 0;
+  
+  function typeCode() {
+    if (index < code.length && codeText) {
+      codeText.textContent += code.charAt(index);
+      index++;
+      setTimeout(typeCode, 30);
+    } else {
+      setTimeout(() => {
+        loadingScreen?.classList.add('hidden');
+        setTimeout(() => {
+          loadingScreen?.remove();
+        }, 500);
+      }, 800);
+    }
+  }
+  
+  typeCode();
+}
 
 function initSmoothScroll() {
   const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
