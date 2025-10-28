@@ -143,10 +143,10 @@ body {
     position: absolute;
 }
 
-.badge-top { top: -10px; left: 50%; transform: translateX(-50%); animation: float 3s ease-in-out infinite; }
+.badge-top { top: -10px; left: 50%; margin-left: -37.5px; animation: float 3s ease-in-out infinite; }
 .badge-top-right { top: 30px; right: 15px; animation: float 3s ease-in-out 0.4s infinite; }
 .badge-bottom-right { bottom: 30px; right: 15px; animation: float 3s ease-in-out 0.8s infinite; }
-.badge-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); animation: float 3s ease-in-out 1.2s infinite; }
+.badge-bottom { bottom: -10px; left: 50%; margin-left: -37.5px; animation: float 3s ease-in-out 1.2s infinite; }
 .badge-left { top: 110px; left: -10px; animation: float 3s ease-in-out 1.6s infinite; }
 
 @keyframes float {
