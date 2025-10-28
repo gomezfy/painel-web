@@ -108,16 +108,28 @@ function initLanguageSelector() {
   const headerTab = document.getElementById('headerLanguageTab');
   if (!headerTab) return;
   
+  const flagMap: Record<Locale, string> = {
+    'en-US': '🇺🇸',
+    'es-ES': '🇪🇸',
+    'pt-BR': '🇧🇷'
+  };
+  
   headerTab.innerHTML = `
-    <div class="language-selector-wrapper">
-      <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}">
+    <div class="language-selector-wrapper" id="languageWrapper">
+      <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}" aria-expanded="false" aria-controls="languageOrbit">
         <img src="/assets/globe-icon.png" alt="Language" class="language-icon-img">
-        <span class="language-label">${locales[currentLocale].language[currentLocale]}</span>
       </button>
-      <div class="language-dropdown" id="languageDropdown">
-        ${supportedLocales.map(loc => `
-          <button class="language-option ${loc === currentLocale ? 'active' : ''}" data-locale="${loc}">
-            ${locales[loc].language[loc]}
+      <div class="language-orbit" id="languageOrbit" role="menu">
+        ${supportedLocales.map((loc, index) => `
+          <button 
+            class="language-flag ${loc === currentLocale ? 'active' : ''}" 
+            data-locale="${loc}"
+            data-index="${index}"
+            role="menuitem"
+            aria-label="${locales[loc].language[loc]}"
+            title="${locales[loc].language[loc]}"
+          >
+            <span class="flag-emoji">${flagMap[loc]}</span>
           </button>
         `).join('')}
       </div>
@@ -125,26 +137,39 @@ function initLanguageSelector() {
   `;
   
   const toggleBtn = document.getElementById('languageToggle');
-  const dropdown = document.getElementById('languageDropdown');
-  const wrapper = headerTab.querySelector('.language-selector-wrapper');
+  const wrapper = document.getElementById('languageWrapper');
   
-  toggleBtn?.addEventListener('click', () => {
-    dropdown?.classList.toggle('show');
+  toggleBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = wrapper?.classList.toggle('is-open');
+    toggleBtn?.setAttribute('aria-expanded', String(isOpen));
   });
   
   document.addEventListener('click', (e) => {
     if (wrapper && !wrapper.contains(e.target as Node)) {
-      dropdown?.classList.remove('show');
+      wrapper.classList.remove('is-open');
+      toggleBtn?.setAttribute('aria-expanded', 'false');
     }
   });
   
-  const options = document.querySelectorAll('.language-option');
-  options.forEach(option => {
-    option.addEventListener('click', () => {
-      const locale = option.getAttribute('data-locale') as Locale;
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && wrapper?.classList.contains('is-open')) {
+      wrapper.classList.remove('is-open');
+      toggleBtn?.setAttribute('aria-expanded', 'false');
+      toggleBtn?.focus();
+    }
+  });
+  
+  const flags = document.querySelectorAll('.language-flag');
+  flags.forEach(flag => {
+    flag.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const locale = flag.getAttribute('data-locale') as Locale;
       if (locale && locale !== currentLocale) {
         applyTranslations(locale);
-        window.location.reload();
+        wrapper?.classList.remove('is-open');
+        toggleBtn?.setAttribute('aria-expanded', 'false');
+        initLanguageSelector();
       }
     });
   });
