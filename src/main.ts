@@ -105,10 +105,10 @@ function applyTranslations(locale: Locale) {
 }
 
 function initLanguageSelector() {
-  const footerSelector = document.getElementById('footerLanguageSelector');
-  if (!footerSelector) return;
+  const headerTab = document.getElementById('headerLanguageTab');
+  if (!headerTab) return;
   
-  footerSelector.innerHTML = `
+  headerTab.innerHTML = `
     <div class="language-selector-wrapper">
       <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}">
         <span class="language-icon">🌐</span>
@@ -126,7 +126,7 @@ function initLanguageSelector() {
   
   const toggleBtn = document.getElementById('languageToggle');
   const dropdown = document.getElementById('languageDropdown');
-  const wrapper = footerSelector.querySelector('.language-selector-wrapper');
+  const wrapper = headerTab.querySelector('.language-selector-wrapper');
   
   toggleBtn?.addEventListener('click', () => {
     dropdown?.classList.toggle('show');
