@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   animateOnScroll();
   initScrollToTop();
-  initThemeToggle();
-  initLanguageSelector();
 });
 
 function initLocalization() {
   currentLocale = detectLocale();
   applyTranslations(currentLocale);
+  initLanguageSelector();
 }
 
 function detectLocale(): Locale {
@@ -94,14 +93,8 @@ function applyTranslations(locale: Locale) {
   if (contactBtns[0]) contactBtns[0].textContent = t.contact.discord;
   if (contactBtns[1]) contactBtns[1].textContent = t.contact.email;
   
-  const footer = document.querySelector('.footer p');
+  const footer = document.querySelector('.footer-text');
   if (footer) footer.textContent = t.footer.copyright;
-  
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.setAttribute('aria-label', t.theme.toggle);
-    updateThemeLabel(locale);
-  }
   
   const scrollBtn = document.getElementById('scrollToTop');
   if (scrollBtn) scrollBtn.setAttribute('aria-label', t.scroll.toTop);
@@ -110,44 +103,36 @@ function applyTranslations(locale: Locale) {
   localStorage.setItem('locale', locale);
 }
 
-function updateThemeLabel(locale: Locale) {
-  const t = locales[locale];
-  const themeLabel = document.querySelector('.theme-toggle-label');
-  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-  
-  if (themeLabel) {
-    themeLabel.textContent = currentTheme === 'light' ? t.theme.light : t.theme.dark;
-  }
-}
-
 function initLanguageSelector() {
-  const languageSelector = document.createElement('div');
-  languageSelector.className = 'language-selector';
-  languageSelector.innerHTML = `
-    <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}">
-      <span class="language-icon">🌐</span>
-      <span class="language-label">${currentLocale.split('-')[0].toUpperCase()}</span>
-    </button>
-    <div class="language-dropdown" id="languageDropdown">
-      ${supportedLocales.map(locale => `
-        <button class="language-option ${locale === currentLocale ? 'active' : ''}" data-locale="${locale}">
-          ${locales[locale].language[locale]}
-        </button>
-      `).join('')}
+  const footerSelector = document.getElementById('footerLanguageSelector');
+  if (!footerSelector) return;
+  
+  footerSelector.innerHTML = `
+    <div class="language-selector-wrapper">
+      <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}">
+        <span class="language-icon">🌐</span>
+        <span class="language-label">${locales[currentLocale].language[currentLocale]}</span>
+      </button>
+      <div class="language-dropdown" id="languageDropdown">
+        ${supportedLocales.map(loc => `
+          <button class="language-option ${loc === currentLocale ? 'active' : ''}" data-locale="${loc}">
+            ${locales[loc].language[loc]}
+          </button>
+        `).join('')}
+      </div>
     </div>
   `;
   
-  document.body.appendChild(languageSelector);
-  
   const toggleBtn = document.getElementById('languageToggle');
   const dropdown = document.getElementById('languageDropdown');
+  const wrapper = footerSelector.querySelector('.language-selector-wrapper');
   
   toggleBtn?.addEventListener('click', () => {
     dropdown?.classList.toggle('show');
   });
   
   document.addEventListener('click', (e) => {
-    if (!languageSelector.contains(e.target as Node)) {
+    if (wrapper && !wrapper.contains(e.target as Node)) {
       dropdown?.classList.remove('show');
     }
   });
@@ -158,15 +143,6 @@ function initLanguageSelector() {
       const locale = option.getAttribute('data-locale') as Locale;
       if (locale && locale !== currentLocale) {
         applyTranslations(locale);
-        
-        options.forEach(opt => opt.classList.remove('active'));
-        option.classList.add('active');
-        
-        const label = document.querySelector('.language-label');
-        if (label) label.textContent = locale.split('-')[0].toUpperCase();
-        
-        dropdown?.classList.remove('show');
-        
         window.location.reload();
       }
     });
@@ -247,33 +223,3 @@ function initScrollToTop() {
   });
 }
 
-function initThemeToggle() {
-  const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = themeToggle?.querySelector('.theme-toggle-icon');
-  const themeLabel = themeToggle?.querySelector('.theme-toggle-label');
-  
-  if (!themeToggle || !themeIcon || !themeLabel) return;
-  
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  setTheme(savedTheme);
-  
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-  
-  function setTheme(theme: string) {
-    const t = locales[currentLocale];
-    if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      themeIcon!.textContent = '☀️';
-      themeLabel!.textContent = t.theme.light;
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      themeIcon!.textContent = '🌙';
-      themeLabel!.textContent = t.theme.dark;
-    }
-  }
-}

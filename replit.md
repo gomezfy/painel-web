@@ -12,11 +12,17 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 ## Recent Changes
 
 ### October 28, 2025
-- ✅ Configurado servidor Express para produção (Vertra Cloud)
-- ✅ Adicionado `server.js` para servir arquivos estáticos
-- ✅ Criado guia de deploy `VERTRA_CLOUD_DEPLOY.md`
-- ✅ Adicionado script `npm start` para ambiente de produção
-- ✅ Instaladas dependências necessárias (Express)
+- ✅ **Design Renovado:** Layout moderno e responsivo para desktop e mobile
+- ✅ **Removido botão de tema:** Mantido apenas tema escuro (mais limpo)
+- ✅ **Seletor de idioma no rodapé:** Design elegante com dropdown animado
+- ✅ **Multi-idioma:** Detecção automática (PT, EN, ES) baseada no navegador
+- ✅ **Animações sofisticadas:** Float, pulse, fadeInUp, hover effects
+- ✅ **Tipografia fluida:** Tamanhos responsivos com clamp()
+- ✅ **Cards melhorados:** Gradientes, sombras e efeitos hover elaborados
+- ✅ **Acessibilidade:** Focus-visible, reduced-motion, aria-labels
+- ✅ **Configurado servidor Express para produção (Vertra Cloud)**
+- ✅ **Criado guia completo de deploy:** `VERTRA_CLOUD_DEPLOY.md`
+- ✅ **Resolvido erro de API key:** Guia em `VERTRA_CLOUD_API_SETUP.md`
 
 ### October 27, 2025
 - ✅ Redesign completo para portfólio de desenvolvedor
