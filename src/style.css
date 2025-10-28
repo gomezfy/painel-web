@@ -578,30 +578,30 @@ body {
 }
 
 .language-flag[data-index="0"] {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-90px) rotate(0deg) scale(0);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(-60px) scale(0);
     transition-delay: 0.05s;
 }
 
 .language-selector-wrapper.is-open .language-flag[data-index="0"] {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-90px) rotate(0deg) scale(1);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(-60px) scale(1);
 }
 
 .language-flag[data-index="1"] {
-    transform: translate(-50%, -50%) rotate(120deg) translateY(-90px) rotate(-120deg) scale(0);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(0px) scale(0);
     transition-delay: 0.1s;
 }
 
 .language-selector-wrapper.is-open .language-flag[data-index="1"] {
-    transform: translate(-50%, -50%) rotate(120deg) translateY(-90px) rotate(-120deg) scale(1);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(0px) scale(1);
 }
 
 .language-flag[data-index="2"] {
-    transform: translate(-50%, -50%) rotate(240deg) translateY(-90px) rotate(-240deg) scale(0);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(60px) scale(0);
     transition-delay: 0.15s;
 }
 
 .language-selector-wrapper.is-open .language-flag[data-index="2"] {
-    transform: translate(-50%, -50%) rotate(240deg) translateY(-90px) rotate(-240deg) scale(1);
+    transform: translate(-50%, -50%) translateX(-90px) translateY(60px) scale(1);
 }
 
 .flag-emoji {
@@ -613,20 +613,19 @@ body {
 .language-flag:hover {
     background: var(--background-secondary);
     border-color: var(--accent-primary);
-    transform: translate(-50%, -50%) rotate(var(--rotation)) translateY(-90px) rotate(calc(-1 * var(--rotation))) scale(1.15);
     box-shadow: var(--shadow-glow);
 }
 
 .language-flag[data-index="0"]:hover {
-    --rotation: 0deg;
+    transform: translate(-50%, -50%) translateX(-95px) translateY(-60px) scale(1.15);
 }
 
 .language-flag[data-index="1"]:hover {
-    --rotation: 120deg;
+    transform: translate(-50%, -50%) translateX(-95px) translateY(0px) scale(1.15);
 }
 
 .language-flag[data-index="2"]:hover {
-    --rotation: 240deg;
+    transform: translate(-50%, -50%) translateX(-95px) translateY(60px) scale(1.15);
 }
 
 .language-flag.active {
@@ -701,27 +700,39 @@ body {
     }
 
     .language-flag[data-index="0"] {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(-70px) rotate(0deg) scale(0);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(-50px) scale(0);
     }
 
     .language-selector-wrapper.is-open .language-flag[data-index="0"] {
-        transform: translate(-50%, -50%) rotate(0deg) translateY(-70px) rotate(0deg) scale(1);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(-50px) scale(1);
     }
 
     .language-flag[data-index="1"] {
-        transform: translate(-50%, -50%) rotate(120deg) translateY(-70px) rotate(-120deg) scale(0);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(0px) scale(0);
     }
 
     .language-selector-wrapper.is-open .language-flag[data-index="1"] {
-        transform: translate(-50%, -50%) rotate(120deg) translateY(-70px) rotate(-120deg) scale(1);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(0px) scale(1);
     }
 
     .language-flag[data-index="2"] {
-        transform: translate(-50%, -50%) rotate(240deg) translateY(-70px) rotate(-240deg) scale(0);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(50px) scale(0);
     }
 
     .language-selector-wrapper.is-open .language-flag[data-index="2"] {
-        transform: translate(-50%, -50%) rotate(240deg) translateY(-70px) rotate(-240deg) scale(1);
+        transform: translate(-50%, -50%) translateX(-70px) translateY(50px) scale(1);
+    }
+    
+    .language-flag[data-index="0"]:hover {
+        transform: translate(-50%, -50%) translateX(-75px) translateY(-50px) scale(1.15);
+    }
+
+    .language-flag[data-index="1"]:hover {
+        transform: translate(-50%, -50%) translateX(-75px) translateY(0px) scale(1.15);
+    }
+
+    .language-flag[data-index="2"]:hover {
+        transform: translate(-50%, -50%) translateX(-75px) translateY(50px) scale(1.15);
     }
 
     .flag-emoji {
