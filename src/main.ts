@@ -111,7 +111,7 @@ function initLanguageSelector() {
   headerTab.innerHTML = `
     <div class="language-selector-wrapper">
       <button id="languageToggle" class="language-toggle" aria-label="${locales[currentLocale].language.label}">
-        <span class="language-icon">🌐</span>
+        <img src="/assets/globe-icon.png" alt="Language" class="language-icon-img">
         <span class="language-label">${locales[currentLocale].language[currentLocale]}</span>
       </button>
       <div class="language-dropdown" id="languageDropdown">
