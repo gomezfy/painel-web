@@ -6,7 +6,7 @@ export default {
   },
   hero: {
     name: 'Farley',
-    bio: '👾 Just coding and vibing.',
+    bio: 'Apenas codificando e vibrando | @gomezfy_ | Hello World',
     skipLink: 'Skip to main content'
   },
   project: {
