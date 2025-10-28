@@ -380,6 +380,36 @@ body {
     box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
 }
 
+.skill-discordjs {
+    background: linear-gradient(135deg, #5865f2 0%, #7289da 100%) !important;
+    box-shadow: 0 0 10px rgba(88, 101, 242, 0.6) !important;
+}
+
+.skill-typescript {
+    background: linear-gradient(135deg, #3178c6 0%, #235a97 100%) !important;
+    box-shadow: 0 0 10px rgba(49, 120, 198, 0.6) !important;
+}
+
+.skill-nodejs {
+    background: linear-gradient(135deg, #68a063 0%, #3c873a 100%) !important;
+    box-shadow: 0 0 10px rgba(104, 160, 99, 0.6) !important;
+}
+
+.skill-database {
+    background: linear-gradient(135deg, #336791 0%, #2d5a7b 100%) !important;
+    box-shadow: 0 0 10px rgba(51, 103, 145, 0.6) !important;
+}
+
+.skill-javascript {
+    background: linear-gradient(135deg, #f7df1e 0%, #d4bb00 100%) !important;
+    box-shadow: 0 0 10px rgba(247, 223, 30, 0.6) !important;
+}
+
+.skill-api {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%) !important;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.6) !important;
+}
+
 /* Contact Section */
 .contact {
     padding: 6rem 2rem;
