@@ -29,6 +29,15 @@ npm run build
 npm start
 ```
 
+## ⚠️ Problemas com API Key?
+
+Se você recebeu o erro **"API_KEY_NOT_FOUND"**, consulte o guia completo:
+👉 **`VERTRA_CLOUD_API_SETUP.md`**
+
+**Resumo:** Para deploy manual pelo painel, você NÃO precisa de API key!
+
+---
+
 ## 📦 Passos para Deploy no Vertra Cloud
 
 ### 1. Faça o Build do Projeto

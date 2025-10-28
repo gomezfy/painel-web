@@ -73,7 +73,9 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 - Run `npm run build` to compile the project
 - Run `npm start` to serve the static files with Express
 - See `VERTRA_CLOUD_DEPLOY.md` for complete deployment instructions
+- See `VERTRA_CLOUD_API_SETUP.md` if you get "API_KEY_NOT_FOUND" error
 - Production server uses port from environment variable `PORT` (default: 3000)
+- Deploy CNAME: cname.vertraweb.app
 
 ## Design Features
 - Cores do Discord (#5865f2 como accent)
