@@ -1132,3 +1132,113 @@ html {
         scroll-behavior: auto !important;
     }
 }
+
+/* Language Selector */
+.language-selector {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 999;
+}
+
+.language-toggle {
+    background: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-toggle:hover {
+    background: var(--background-secondary);
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(88, 101, 242, 0.2);
+}
+
+.language-icon {
+    font-size: 1.1rem;
+}
+
+.language-label {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 8px;
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-option:hover {
+    background: var(--background-secondary);
+    color: var(--accent-primary);
+}
+
+.language-option.active {
+    background: var(--accent-gradient);
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .language-selector {
+        top: 80px;
+        right: 15px;
+    }
+    
+    .language-toggle {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .language-dropdown {
+        min-width: 140px;
+    }
+    
+    .language-option {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
