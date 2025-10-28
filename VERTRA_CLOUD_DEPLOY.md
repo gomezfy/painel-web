@@ -79,9 +79,40 @@ Se você precisar configurar variáveis de ambiente no Vertra Cloud:
 - `PORT` - Porta do servidor (geralmente fornecida automaticamente)
 - `NODE_ENV=production` - Define o ambiente como produção
 
+## 🌐 Domínio Customizado (CNAME)
+
+Seu domínio no Vertra Cloud: **cname.vertraweb.app**
+
+### Como configurar um domínio customizado:
+
+Se você quiser usar seu próprio domínio (exemplo: seusite.com), configure no painel do Vertra Cloud:
+
+1. Acesse as configurações do projeto no Vertra Cloud
+2. Vá em "Domínios" ou "Custom Domain"
+3. Adicione seu domínio personalizado
+4. Configure os registros DNS no seu provedor de domínio:
+   - **Tipo**: CNAME
+   - **Nome**: @ ou www
+   - **Valor**: cname.vertraweb.app
+   - **TTL**: 3600 (1 hora)
+
+**Exemplo de configuração DNS:**
+```
+Tipo    | Nome | Valor                  | TTL
+--------|------|------------------------|------
+CNAME   | www  | cname.vertraweb.app   | 3600
+CNAME   | @    | cname.vertraweb.app   | 3600
+```
+
+### Domínios padrão do Vertra Cloud:
+- **CNAME**: cname.vertraweb.app
+- O Vertra Cloud fornecerá um subdomínio automático também (ex: seu-projeto.vertraweb.app)
+
 ## ✅ Verificação
 
-Após o deploy, seu site estará disponível no domínio fornecido pelo Vertra Cloud.
+Após o deploy, seu site estará disponível em:
+- Domínio padrão do Vertra Cloud (fornecido após deploy)
+- Seu domínio customizado (se configurado)
 
 ### O que o servidor faz:
 - Serve os arquivos estáticos da pasta `dist/`
