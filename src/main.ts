@@ -81,6 +81,12 @@ function applyTranslations(locale: Locale) {
   const projectBtn = document.querySelector('.project-link');
   if (projectBtn) projectBtn.textContent = t.project.addButton;
   
+  const glotfyTitle = document.querySelector('.glotfy-title');
+  if (glotfyTitle) glotfyTitle.textContent = t.glotfy.title;
+  
+  const glotfyStatus = document.querySelector('.glotfy-status');
+  if (glotfyStatus) glotfyStatus.textContent = t.glotfy.status;
+  
   const skillsTitle = document.querySelector('#skills .section-title');
   if (skillsTitle) skillsTitle.textContent = t.skills.title;
   

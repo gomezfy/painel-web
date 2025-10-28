@@ -14,6 +14,10 @@ export default {
     description: '¡El bot de Discord definitivo para mantener el orden y la diversión!<br>Control total con moderación avanzada, comandos útiles, sistemas automáticos y mucho más — todo con alto rendimiento y una interfaz simple e intuitiva.<br><br>Sheriff Rex: rápido, confiable y siempre vigilando tu servidor.',
     addButton: 'Añadir al Servidor →'
   },
+  glotfy: {
+    title: 'Glot.fy',
+    status: 'Bot en construcción 🚧'
+  },
   skills: {
     title: 'Tecnologías y Habilidades'
   },

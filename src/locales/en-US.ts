@@ -14,6 +14,10 @@ export default {
     description: 'The ultimate Discord bot to keep order and fun!<br>Full control with advanced moderation, useful commands, automatic systems and much more — all with high performance and a simple, intuitive interface.<br><br>Sheriff Rex: fast, reliable and always watching your server.',
     addButton: 'Add to Server →'
   },
+  glotfy: {
+    title: 'Glot.fy',
+    status: 'Bot under construction 🚧'
+  },
   skills: {
     title: 'Technologies & Skills'
   },
