@@ -121,6 +121,7 @@ body {
     z-index: 1;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation: avatarFloat 6s ease-in-out infinite;
+    cursor: pointer;
 }
 
 @keyframes avatarFloat {
@@ -150,6 +151,33 @@ body {
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@keyframes badgeDrop {
+    0% { 
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    30% {
+        transform: translateY(600px) rotate(180deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.tech-badge.animate-drop {
+    animation: badgeDrop 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards !important;
 }
 
 .tech-badge:hover {

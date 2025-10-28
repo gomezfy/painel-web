@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   animateOnScroll();
   initScrollToTop();
+  initBadgeDropAnimation();
 });
 
 function initLocalization() {
@@ -219,6 +220,27 @@ function initScrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
+    });
+  });
+}
+
+function initBadgeDropAnimation() {
+  const avatar = document.querySelector('.bot-avatar');
+  const badges = document.querySelectorAll('.tech-badge');
+  
+  if (!avatar || !badges.length) return;
+  
+  avatar.addEventListener('click', () => {
+    badges.forEach((badge, index) => {
+      badge.classList.remove('animate-drop');
+      
+      setTimeout(() => {
+        badge.classList.add('animate-drop');
+      }, index * 100);
+      
+      setTimeout(() => {
+        badge.classList.remove('animate-drop');
+      }, 1600 + (index * 100));
     });
   });
 }
