@@ -9,7 +9,16 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 - **Layout**: Design responsivo com seções dedicadas
 - **Port**: 5000 (servidor de desenvolvimento frontend)
 
-## Recent Changes (October 27, 2025)
+## Recent Changes
+
+### October 28, 2025
+- ✅ Configurado servidor Express para produção (Vertra Cloud)
+- ✅ Adicionado `server.js` para servir arquivos estáticos
+- ✅ Criado guia de deploy `VERTRA_CLOUD_DEPLOY.md`
+- ✅ Adicionado script `npm start` para ambiente de produção
+- ✅ Instaladas dependências necessárias (Express)
+
+### October 27, 2025
 - ✅ Redesign completo para portfólio de desenvolvedor
 - ✅ Adicionado hero section com call-to-action
 - ✅ Grid de projetos do Discord com 6 cards exemplos
@@ -57,8 +66,14 @@ Portfólio profissional desenvolvido em TypeScript + Vite para exibir projetos d
 
 ## Development
 - Run `npm install` to install dependencies
-- Run `npm run dev` to start the development server
+- Run `npm run dev` to start the development server (Replit/localhost)
 - The app runs on port 5000 and is accessible via Replit's webview
+
+## Production (Vertra Cloud)
+- Run `npm run build` to compile the project
+- Run `npm start` to serve the static files with Express
+- See `VERTRA_CLOUD_DEPLOY.md` for complete deployment instructions
+- Production server uses port from environment variable `PORT` (default: 3000)
 
 ## Design Features
 - Cores do Discord (#5865f2 como accent)
