@@ -52,5 +52,17 @@ export default {
     uiItem1: 'Embeds with minimalist design and neutral colors',
     uiItem2: 'Creation of leaderboards and profile cards with Canvas, gradients and custom borders',
     uiItem3: 'Use of <strong>47 custom emojis</strong> in Western theme'
-  }
+  },
+  sheriffQuotes: [
+    "This server's faster than my shadow! 🤠",
+    "Auto moderation? That's high-tech sheriff work!",
+    "Back in my day, banning folks was harder...",
+    "TypeScript is my horse, Discord is my town!",
+    "This bot never sleeps, just like a good sheriff! 👮",
+    "Canvas and gradients? I'm an artist AND a sheriff!",
+    "47 custom emojis... that's cowboy style!",
+    "Keeping order with algorithms and clean code! 💻",
+    "Economy, minigames... there's a party in the Wild West!",
+    "Multi-language? I speak every cowboy's tongue! 🌎"
+  ]
 };

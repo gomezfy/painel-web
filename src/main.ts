@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animateOnScroll();
   initScrollToTop();
   initBadgeDropAnimation();
+  initSheriffQuotes();
 });
 
 function initLocalization() {
@@ -294,6 +295,37 @@ function initBadgeDropAnimation() {
         badge.classList.remove('animate-drop');
       }, 1600 + (index * 100));
     });
+  });
+}
+
+function initSheriffQuotes() {
+  const sheriffImg = document.getElementById('sheriffImg');
+  const speechBubble = document.getElementById('sheriffSpeech');
+  
+  if (!sheriffImg || !speechBubble) return;
+  
+  let isShowing = false;
+  
+  sheriffImg.addEventListener('click', () => {
+    if (isShowing) return;
+    
+    const t = locales[currentLocale];
+    const quotes = t.sheriffQuotes || [];
+    
+    if (quotes.length === 0) return;
+    
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    
+    speechBubble.textContent = randomQuote;
+    speechBubble.classList.add('show');
+    isShowing = true;
+    
+    setTimeout(() => {
+      speechBubble.classList.remove('show');
+      setTimeout(() => {
+        isShowing = false;
+      }, 300);
+    }, 3500);
   });
 }
 

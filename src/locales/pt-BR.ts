@@ -52,5 +52,17 @@ export default {
     uiItem1: 'Embeds com design minimalista e cores neutras',
     uiItem2: 'Criação de leaderboards e cards de perfil com Canvas, gradientes e bordas personalizadas',
     uiItem3: 'Uso de <strong>47 emojis personalizados</strong> no tema Western'
-  }
+  },
+  sheriffQuotes: [
+    "Esse servidor tá mais rápido que minha sombra! 🤠",
+    "Moderação automática? Isso é coisa de xerife high-tech!",
+    "No meu tempo, banir alguém era mais difícil...",
+    "TypeScript é meu cavalo, Discord é minha cidade!",
+    "Esse bot não dorme, assim como um bom xerife! 👮",
+    "Canvas e gradientes? Sou artista E xerife!",
+    "47 emojis personalizados... isso é muito estilo cowboy!",
+    "Mantenho a ordem com algoritmos e código limpo! 💻",
+    "Economia, minigames... tem festa no Velho Oeste!",
+    "Multi-idioma? Falo a língua de todos os cowboys! 🌎"
+  ]
 };

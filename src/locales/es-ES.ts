@@ -52,5 +52,17 @@ export default {
     uiItem1: 'Embeds con diseño minimalista y colores neutros',
     uiItem2: 'Creación de tablas de clasificación y tarjetas de perfil con Canvas, gradientes y bordes personalizados',
     uiItem3: 'Uso de <strong>47 emojis personalizados</strong> en tema Western'
-  }
+  },
+  sheriffQuotes: [
+    "¡Este servidor es más rápido que mi sombra! 🤠",
+    "¿Moderación automática? ¡Eso es trabajo de sheriff high-tech!",
+    "En mis tiempos, banear gente era más difícil...",
+    "¡TypeScript es mi caballo, Discord es mi pueblo!",
+    "¡Este bot nunca duerme, como un buen sheriff! 👮",
+    "¿Canvas y gradientes? ¡Soy artista Y sheriff!",
+    "47 emojis personalizados... ¡eso es puro estilo vaquero!",
+    "¡Mantengo el orden con algoritmos y código limpio! 💻",
+    "Economía, minijuegos... ¡hay fiesta en el Viejo Oeste!",
+    "¿Multi-idioma? ¡Hablo la lengua de todos los vaqueros! 🌎"
+  ]
 };
