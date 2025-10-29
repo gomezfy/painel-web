@@ -43,5 +43,14 @@ export default {
     'pt-BR': '🇧🇷 Português',
     'en-US': '🇺🇸 English',
     'es-ES': '🇪🇸 Español'
+  },
+  techInfo: {
+    title: '🤖 Tecnología de Punta',
+    description1: 'Bot de Discord desarrollado en <strong>TypeScript</strong> (Node.js 20) enfocado en jugabilidad temática del Viejo Oeste, economía, minijuegos y sistema de perfiles personalizados.',
+    description2: 'Soporta múltiples idiomas <strong>(PT-BR, EN-US, ES-ES, FR)</strong> con detección automática de idioma.',
+    uiTitle: '🎨 UI/UX',
+    uiItem1: 'Embeds con diseño minimalista y colores neutros',
+    uiItem2: 'Creación de tablas de clasificación y tarjetas de perfil con Canvas, gradientes y bordes personalizados',
+    uiItem3: 'Uso de <strong>47 emojis personalizados</strong> en tema Western'
   }
 };

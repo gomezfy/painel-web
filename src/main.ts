@@ -106,6 +106,27 @@ function applyTranslations(locale: Locale) {
   const scrollBtn = document.getElementById('scrollToTop');
   if (scrollBtn) scrollBtn.setAttribute('aria-label', t.scroll.toTop);
   
+  const techInfoTitle = document.querySelector('.tech-info-title');
+  if (techInfoTitle) techInfoTitle.textContent = t.techInfo.title;
+  
+  const techInfoDesc1 = document.querySelector('.tech-info-desc1');
+  if (techInfoDesc1) techInfoDesc1.innerHTML = t.techInfo.description1;
+  
+  const techInfoDesc2 = document.querySelector('.tech-info-desc2');
+  if (techInfoDesc2) techInfoDesc2.innerHTML = t.techInfo.description2;
+  
+  const techInfoUiTitle = document.querySelector('.tech-info-ui-title');
+  if (techInfoUiTitle) techInfoUiTitle.textContent = t.techInfo.uiTitle;
+  
+  const techInfoUiItem1 = document.querySelector('.tech-info-ui-item1');
+  if (techInfoUiItem1) techInfoUiItem1.innerHTML = t.techInfo.uiItem1;
+  
+  const techInfoUiItem2 = document.querySelector('.tech-info-ui-item2');
+  if (techInfoUiItem2) techInfoUiItem2.innerHTML = t.techInfo.uiItem2;
+  
+  const techInfoUiItem3 = document.querySelector('.tech-info-ui-item3');
+  if (techInfoUiItem3) techInfoUiItem3.innerHTML = t.techInfo.uiItem3;
+  
   currentLocale = locale;
   localStorage.setItem('locale', locale);
 }

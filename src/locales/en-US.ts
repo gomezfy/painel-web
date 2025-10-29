@@ -43,5 +43,14 @@ export default {
     'pt-BR': '🇧🇷 Português',
     'en-US': '🇺🇸 English',
     'es-ES': '🇪🇸 Español'
+  },
+  techInfo: {
+    title: '🤖 Cutting-Edge Technology',
+    description1: 'Discord bot developed in <strong>TypeScript</strong> (Node.js 20) focused on Wild West themed gameplay, economy, minigames and custom profile system.',
+    description2: 'Supports multiple languages <strong>(PT-BR, EN-US, ES-ES, FR)</strong> with automatic language detection.',
+    uiTitle: '🎨 UI/UX',
+    uiItem1: 'Embeds with minimalist design and neutral colors',
+    uiItem2: 'Creation of leaderboards and profile cards with Canvas, gradients and custom borders',
+    uiItem3: 'Use of <strong>47 custom emojis</strong> in Western theme'
   }
 };
