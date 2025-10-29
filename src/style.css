@@ -352,6 +352,37 @@ body {
     font-weight: 500;
 }
 
+/* Sheriff Full Body Image */
+.sheriff-full-body {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.sheriff-full-img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(88, 101, 242, 0.4));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: sheriffFloat 4s ease-in-out infinite;
+}
+
+.sheriff-full-img:hover {
+    transform: translateY(-10px) scale(1.05);
+    filter: drop-shadow(0 15px 40px rgba(88, 101, 242, 0.6));
+}
+
+@keyframes sheriffFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 /* Skills Section */
 .skills {
     padding: 6rem 2rem;
