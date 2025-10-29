@@ -352,6 +352,27 @@ body {
     font-weight: 500;
 }
 
+/* Sheriff Alternative Image */
+.sheriff-alt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sheriff-alt-img {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(88, 101, 242, 0.4));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: sheriffFloat 4s ease-in-out infinite 0.5s;
+}
+
+.sheriff-alt-img:hover {
+    transform: translateY(-10px) scale(1.1);
+    filter: drop-shadow(0 15px 40px rgba(88, 101, 242, 0.6));
+}
+
 /* Sheriff Full Body Image */
 .sheriff-full-body {
     margin-top: 3rem;
