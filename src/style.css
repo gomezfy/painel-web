@@ -359,8 +359,8 @@ body {
     align-items: flex-end;
     padding: 0;
     position: relative;
-    z-index: 1;
-    margin-bottom: -80px;
+    z-index: 2;
+    margin-bottom: 2rem;
 }
 
 .sheriff-alt-img {
@@ -382,10 +382,10 @@ body {
     display: flex;
     justify-content: center;
     padding: 0 1rem;
-    padding-top: 100px;
+    padding-bottom: 3rem;
     animation: fadeInUp 1s ease 0.3s backwards;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .tech-info-card {
