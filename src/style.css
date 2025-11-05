@@ -198,6 +198,28 @@ body {
     text-align: center;
 }
 
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 6px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.social-icon:hover {
+    color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.social-icon svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
 .name-emoji {
     display: inline-block;
     animation: rotate 3s ease-in-out infinite;
